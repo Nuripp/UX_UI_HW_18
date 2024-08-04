@@ -6,9 +6,34 @@ h1, h2 {
 }
 h1{
     font-size: 50px;
+    position: relative;
+    left: 8%;
+    top: -10px;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 80px;
+    z-index: 1;
 }
+h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 200%;
+    height: 10px;
+    background-color: #f9f98e;
+    z-index: -1;
+    box-shadow: 0 5px 0 0 #f9f98e;
+}
+
 h2 {
     font-size: 40px;
+}
+
+h4 {
+    margin: 20px 0 10px;
+    font-size: 20px;
+    font-weight: 700;
 }
 body {
     font-family: "DM Sans", sans-serif;
@@ -93,4 +118,175 @@ nav li {
 nav .active{
     background-color: #F9F98E;
     text-align: center;
+}
+
+/* Work section*/
+.myWork {
+    margin: 200px auto 0;
+    padding: 20px;
+    width: 80%;
+
+}
+
+.workGrid {
+    display: grid;
+    gap: 20px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: auto auto;
+    gap: 100px;
+}
+
+.workitem {
+    position: relative;
+    display: inline-block;
+    max-width: 300px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.workitem img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 50px;
+    display: block;
+}
+
+.workitem:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid black;
+    border-radius: 70px;
+    pointer-events: none;
+}
+
+.workDescription {
+    text-align: left;
+    width: 500px;
+    line-height: 1.6;
+    padding-left: 30px;
+}
+
+.workDescription p {
+    font-size: 18px;
+}
+
+/* Footer section*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 999px;
+    margin-top: 100px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.footer-logo {
+    max-width: 0px;
+    margin-right: -55px;
+    margin-left: 40px;
+}
+
+.footer-menu {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: -30px 0px;
+    margin-right: 10px;
+    border-right: 1px solid #777777;
+    padding-right: 80px;
+    margin-bottom: -15px;
+}
+
+.footer-menu li {
+    margin: 10px 0;
+}
+
+.footer-menu a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-info a {
+    color: black;
+    text-decoration: none;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: -150px;
+    margin-right: 20px;
+}
+
+.info-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: -30px;
+    margin-left: -75px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+}
+
+.phone, .email {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.phone a, .email a {
+    padding-left: 30px;
+    font-weight: 500;
+    margin: 0;
+    line-height: 1;
+}
+
+.phone-img, .email-img {
+    display: flex;
+    align-items: center;
+    margin-right: 2px;
+}
+
+.nyc-image {
+    max-width: 50px;
+    margin-top: -30px;
+    margin-right: 40px;
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
