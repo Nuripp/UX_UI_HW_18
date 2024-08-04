@@ -144,6 +144,7 @@ nav .active{
     max-width: 300px;
     padding: 20px;
     margin: 20px auto;
+    transition: transform 0.3s ease;
 }
 
 .workitem img {
@@ -152,6 +153,11 @@ nav .active{
     height: auto;
     border-radius: 50px;
     display: block;
+    transition: transform 0.3s ease;
+}
+
+.workitem:hover {
+    transform: scale(1.2); /* 마우스를 올렸을 때 커지도록 설정 */
 }
 
 .workitem:before {
@@ -164,6 +170,12 @@ nav .active{
     border: 1px solid black;
     border-radius: 70px;
     pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.workitem:hover:before {
+    transform: scale(1.05); /* 마우스를 올렸을 때 테두리도 커지도록 설정 */
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
 }
 
 .workDescription {
