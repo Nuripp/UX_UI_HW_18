@@ -268,8 +268,8 @@ footer {
 }
 
 .footer-logo img {
-    display: block; /* 이미지가 블록 요소로 취급되도록 설정 */
-    margin: 0 auto; /* 이미지 수평 중앙 정렬 */
+    display: block;
+    margin: 0 auto;
 }
 
 .footer-menu {
@@ -464,8 +464,8 @@ footer {
     }
 
     .tool .circle {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
     }
 
     .tool img {
@@ -475,20 +475,24 @@ footer {
 
 
     .skills {
-        display: grid;
-        grid-template-columns: 1fr 1fr ;
-        grid-template-rows: 1fr 1fr 1fr;
-        gap: 20px 10px;
-        width: auto;
-        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+        max-width: none;
         margin: 0 auto;
         margin-bottom: 50px;
         text-align: left;
         justify-content: center;
-        margin-left: 40px;
+        margin-left: 20px;
     }
     .skill {
-        font-size: 16px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        max-width: 170px;
     }
 
     .descriptions {
@@ -501,7 +505,7 @@ footer {
     }
 
     .descriptions p {
-        font-size: 16px;
+        font-size: 14px;
         max-width: none;
         width: 100%;
         margin: 0 auto 40px auto;
@@ -612,6 +616,7 @@ footer {
     }
 }
 
+  /*only header-mobile */
 @media only screen and (min-width: 241px) and (max-width: 1124px) {
     header.navigation {
         display: none;
@@ -637,7 +642,16 @@ footer {
         margin-right: 30px;
     }
 
-    
+
+    h1 {
+        font-size: 34px;
+        margin-top: 160px;
+    }
+}
+
+
+  /*only footer and content-mobile */
+@media only screen and (min-width: 431px) and (max-width: 990px) {
     .footer-menu {
         display: none;
     }
@@ -730,8 +744,118 @@ footer {
         font-size: 12px;
     }
 
-    h1 {
-        font-size: 34px;
-        margin-top: 160px;
+    h4 {
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: -10px;
+    }
+
+    .mySkills {
+        width: 100%;
+        padding: 0px;
+        box-sizing: border-box;
+        margin-top: 10px;
+    }
+
+
+    .flexContainer {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 10px;
+        box-sizing: border-box;
+        position: relative;
+    }
+
+    .tools {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 80px;
+        justify-items: center;
+        width: auto;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .tool {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        align-items: center;
+    }
+
+    .tools-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .skills-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 300px;
+    }
+
+    .tool .circle {
+        width: 80px;
+        height: 80px;
+    }
+
+    .tool img {
+        width: 50px;
+        height: 50px;
+    }
+
+
+    .skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: none;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        text-align: left;
+        justify-content: center;
+        margin-left: 20px;
+    }
+    .skill {
+        font-size: 16px;
+        margin-bottom: 10px;
+        width: 100%;
+        display: flex;
+        max-width: 200px;
+    }
+
+    .descriptions {
+        margin-top: -250px;
+        text-align: center;
+        max-width: 400px;
+
+    }
+
+    .descriptions p {
+        font-size: 16px;
+        max-width: none;
+        width: 100%;
+        margin: 0 auto 40px auto;
+    }
+
+    .backgroundImage {
+        position: absolute;
+        top: calc(50% - 30px);
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 600px;
+        width: 80%;
+        height: auto;
+        z-index: -1;
     }
 }
